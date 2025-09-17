@@ -1,2 +1,2 @@
-# COLLEGE_PROJECT
+# TRIOTREK
 "TrioTrek" is a college project.
