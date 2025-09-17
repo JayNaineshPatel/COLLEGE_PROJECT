@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrioTrek - Home</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #121212;
+            color: #f5f2f2;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation Bar */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: #1f1f1f;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+        #contact a {
+    color: #9b3c3c; /* Change to your desired color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    color: #7f4242; /* Color on hover */
+}
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .logo img {
+            width: 70px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #9b3c3c;
+            font-weight: bold;
+            padding: 8px 12px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #855252;
+        }
+
+        .btn {
+            background: #444;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: #666;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: url('new.jpg') no-repeat center center/cover;
+            padding: 50px;
+            margin-top: 60px;
+            border-radius: 10px;
+        }
+
+        .hero-content {
+            animation: fadeIn 1.5s ease-in-out;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        /* Sections */
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 10px;
+            background: #1f1f1f;
+            gap: 40px;
+        }
+
+        .section.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .section img {
+            width: 70%;
+            max-width: 700px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .section .content {
+            max-width: 50%;
+            text-align: left;
+        }
+
+        .section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #9b3c3c;
+        }
+
+        .section p {
+            font-size: 18px;
+            color: #dacdcd;
+        }
+
+        /* Read More Button */
+        .read-more-btn {
+            background: none;
+            color: #a05954;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 18px;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="TrioTrek Logo">TRIOTREK
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="login.php" class="btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome to TrioTrek</h1>
+            <p>Your all-in-one platform for seamless group collaboration and idea submission.</p>
+            <a href="register.php" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="section" id="about">
+        <img src="about us.jpg" alt="About TrioTrek">
+        <div class="content">
+            <h2>About Us</h2>
+            <p id="about-text">
+                TrioTrek is a collaborative platform designed to streamline the group project ideation and submission process for students and instructors alike.
+                <span id="about-more" style="display: none;">
+                        - Our goal is to make group work more efficient, organized, and engaging by offering a user-friendly interface that fosters creative collaboration and communication.<br/> 
+                        - With features like group creation, idea submission, and teacher oversight, TrioTrek empowers students to develop innovative solutions and share their academic projects seamlessly.<br/>
+                        - Our team of developers and educators have worked together to create a platform that simplifies the way students interact with their projects, teachers, and peers.<br/> 
+                        - TrioTrek aims to eliminate common challenges in group work, such as miscommunication and disorganization, while enhancing the overall experience for everyone involved.<br/>  
+                        - Whether you're a student looking for a platform to showcase your ideas or an instructor seeking an efficient way to manage and evaluate student projects, 
+                          TrioTrek is the solution that brings people together in a virtual space to innovate and succeed.
+                     
+                </span>
+            </p>
+            <button class="read-more-btn" onclick="toggleReadMore('about-more', this)">Read More</button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section reverse" id="features">
+        <img src="features.jpg" alt="Features">
+        <div class="content">
+            <h2>Features</h2>
+            <p id="features-text">
+                Explore our powerful tools to enhance your group collaboration experience.
+                <span id="features-more" style="display: none;">
+                    - Seamless Collaboration for teamwork.<br>
+                    - Idea Submission & Tracking.<br>
+                    - Teacher Oversight for guidance.<br>
+                    - Secure Login & Permissions.<br>
+                    - Real-time Updates and notifications.<br>
+                    - User-friendly Interface.
+                </span>
+            </p>
+            <button class="read-more-btn" onclick="toggleReadMore('features-more', this)">Read More</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+<section class="section" id="contact">
+    <img src="contactus.jpg" alt="Contact">
+    <div class="content">
+        <h2>Contact Us</h2>
+        <p id="shorttext">
+            Have any questions or feedback? Get in touch with us! We are here to help.
+        <span id="text" style="display: none;">
+            - Get in Touch: Reach out to us for any queries, support, or feedback.<br/>
+            - Support & Assistance: Our team is available to help you with any issues or questions.<br/>
+            - Quick Response Time: We ensure timely replies to your inquiries.<br/>
+            - Users Satisfaction: Your feedback helps us improve and serve you better.<br/>
+            </span>
+        </p>
+        <button class="read-more-btn"  onclick="toggleReadMore('text', this)">Read More</button>
+        <p>📧 Email: <a href="mailto:jaynp1711@gmail.com">jaynp1711@gmail.com</a><br>
+           📞 Call: <a href="tel:+916377117784">+91 6377117784</a>
+        </p>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2025 TrioTrek. All rights reserved.
+    </div>
+
+    <script>
+        function toggleReadMore(id, btn) {
+            var extraText = document.getElementById(id);
+            if (extraText.style.display === "none") {
+                extraText.style.display = "inline";
+                btn.textContent = "Read Less";
+            } else {
+                extraText.style.display = "none";
+                btn.textContent = "Read More";
+            }
+        }
+    </script>
+
+</body>
+</html>
